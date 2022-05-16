@@ -13,12 +13,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }
     });
 
-    $("#nav .nav-element").click(function(e){
+    $("nav a.nav-element").click(function(e){
         navMenu.classList.remove("display");
         iconContainer.src = "assets/icons/menu.svg";
         console.log(e);
     });
-    
 });
 /**
  * Opens a dialog. It adds a open class to the Element
