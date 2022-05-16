@@ -1,0 +1,214 @@
+#navigateur-projets{
+    margin-top: 3em;
+    min-height: 20em;
+    width: 100%;
+    overflow: visible;
+}
+
+
+#navigateur-projets .dialog{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    background-color: none;
+    transition: opacity 1s ;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 2em;
+}
+#navigateur-projets #loading.dialog{
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#navigateur-projets .dialog img{
+    filter: invert();
+    padding: 0.5em;
+    width: 50px
+}
+
+#navigateur-projets .dialog h5{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#navigateur-projets .dialog.show{
+    width: 100%;
+    height: 400px;
+    opacity: 1;
+}
+
+#navigateur-projets #criticalError.dialog.show{
+    background-color: rgba(0, 0,0, 0.5);
+    width: 100%;
+    height: 400px;
+}
+
+
+
+#navigateur-projets .projetContainer{
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    transition: opacity 0.2s;
+}
+
+#navigateur-projets .projetContainer.display{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    opacity: 1;
+    height: auto;
+    width: auto;
+}
+
+#navigateur-projets .icon-container img{
+    width: 2.5em;
+}
+#navigateur-projets .icon-container{
+    margin-bottom: 0.5em;
+}
+
+#navigateur-projets .clickableElement.association{
+    border-radius: 100%;
+}
+
+#navigateur-projets a.site{
+    width: 40%;
+    flex-direction: row;
+    margin: 1em;
+    padding-right: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    height:auto;
+    width: auto;
+    min-width: 8em;
+    border-left: 1.5em solid white;
+    transform: scale(1);   
+}
+
+#navigateur-projets a.site .clickable-heading{
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+#navigateur-projets a.site:hover{
+    border-left: 1em solid #495057;
+    transform: scale(1);
+}
+#navigateur-projets a.site:active{
+    border-left: 1.5em solid #495057;
+    transform: scale(1);
+}
+
+#navigateur-projets .clickableElement{
+    margin: 1em;
+    padding: 1em;
+    border-radius: 2em;
+    box-shadow: 6px 6px #495057;
+    background-color: white;
+    width: 8em;
+    height: 8em;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    order: 2;
+}
+
+#navigateur-projets .back-button{
+    background-color: white;
+    border-radius: 100%;
+}
+#navigateur-projets .back-button .icon-container{
+    margin-bottom: 0;
+    padding: 0.2em;
+}
+
+.projetContainer .error{
+    background-color: #f48a66;
+    font-weight: bold;
+    box-shadow: 0 0;
+}
+
+.projetContainer .error div{
+    margin-right: 1em;
+}
+
+#navigateur-projets .controles{
+    width: 100%;
+}
+
+#navigateur-projets .information{
+    align-self: center;
+    margin-left: 1em;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#navigateur-projets .controles{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+#navigateur-projets .featured{
+    order: 1;
+}
+
+#navigateur-projets .featured::after{
+    content:"Nouveau";
+    color: lightcoral;
+    font-weight: bolder;
+    text-shadow: 1px 1px #495057;
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+.loaderElement{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    animation-name: loader;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    background-color: black;
+    animation-timing-function: ease;
+}
+
+@keyframes loader {
+    0%   {transform: translateX(0px);}
+    50%  {transform: translateX(280px);}
+    100% {transform: translateX(0px);}
+  }
+
+@keyframes pulse {
+    0%   {
+        transform: scale(1) translate(-30px, 1px);
+    }
+    50%  {
+        transform: scale(1.05) translate(-30px, 1px);
+    }
+    100% {
+        transform: scale(1) translate(-30px, 1px);
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    #navigateur-projets a.site{
+        width: 100%;
+    }
+}

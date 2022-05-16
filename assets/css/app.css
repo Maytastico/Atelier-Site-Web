@@ -1,0 +1,383 @@
+*{
+    scroll-behavior: smooth;
+
+}
+
+body{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+    background: linear-gradient(to right, #F7EDE2, #F5CAC3);
+}
+
+img{
+    min-width: 2em;
+}
+
+a{
+    color: black
+}
+
+a:hover{
+    color: black
+}
+a:visited{
+    color: black
+}
+
+.clickableElement.btn{
+    background-color: #e2ece9;
+    font-size: 1.0em;
+    box-shadow: 0 5px 1px #495057;
+    text-align: center;
+    border-radius: 2em;
+    padding: 0.4em;
+    margin: 1em 0em;
+    display: block;
+}
+
+.clickableElement{
+    transition: 0.2s;
+}
+
+.clickableElement{
+    transition: 0.2s;
+}
+
+.clickableElement:hover{
+    transform: scale(1.05);
+}
+
+.clickableElement:active{
+    transform: scale(1.1);
+}
+
+
+
+
+nav{
+    margin-bottom: 2em;
+    
+}
+
+nav a{
+    color: black;
+}
+
+nav a:hover{
+    color: black;
+}
+
+nav #burger{
+    z-index: 10000000000000000000000;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 6em;
+    height: 6em;
+    background: white;
+    border-bottom-left-radius: 100%;
+    box-shadow: 0 0 10px #495057;
+    transition: 0.2s;
+}
+nav #burger:hover{
+    transform: scale(1.05);
+}
+nav #burger:active{
+    transform: scale(1.2);
+}
+nav #burger img{
+    display: block;
+    width: 2em;
+}
+
+nav #nav-headline h1{
+    font-weight: bold;
+    text-align: center;
+}
+
+.nav-element .icon-container img{
+    margin: 0.1em auto;
+    text-align: center;
+    display:block;
+    width: 2em;
+}
+
+nav .nav-element{
+    transition: 0.2s;
+    border-radius: 5em;
+}
+
+nav .nav-element:hover{
+    transform: scale(1.07);
+}
+
+nav .nav-element:active{
+    transform: scale(1.2);
+}
+
+nav .nav-heading{
+    text-align: center;
+}
+
+#bienvenue, #les-apercus .description-container,  #les-apercus article .lignes{
+    font-size: 1.3em;
+}
+#bienvenue .profile-container{
+    max-width: 300px;
+    max-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+#les-apercus > div{
+    flex-wrap: nowrap;
+}
+
+#les-apercus .img-container, #les-apercus .video-container{
+    margin: 0 1em;
+    width: 100%;
+}
+
+
+#contacter-moi > .box-container{
+    height: 100%;
+    width: 100%;
+}
+
+footer .box-container{
+    margin: 5em auto 0 auto;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 -5px #495057;
+}
+.date-container, .location-container{
+    color: darkgray;
+}
+
+
+.description-container{
+    margin-top: 1em;
+}
+
+.box-container{
+    padding: 1em;
+    margin: 1em auto;
+    background-color: white;
+    border-radius: 2em;
+    box-shadow: 6px 6px #495057;
+}
+
+.profile-container{
+    border-radius: 100%;
+    overflow:hidden;
+}
+
+.img-container{
+    border-radius: 2em;
+    height: 100%;
+    overflow:hidden;
+}
+
+.video-container video{
+    border-radius: 2em;
+}
+
+.emphasized-text{
+    background-color: #fde2e4;
+    color: black;
+    font-size: 1.2em;
+    padding: 1em;
+}
+.flex{
+    display: flex;
+}
+.flex.stretch{
+    align-items: stretch;
+}
+.flex.center{
+    justify-content: center;
+}
+.flex.between{
+    justify-content: space-between;
+}
+.flex.around{
+    justify-content: space-around;
+}
+.flex .half{
+    max-width: calc( 50% - 10px );
+}
+.flex .half.force{
+   width: calc( 50% - 10px );
+}
+.flex .half.noSpacing{
+    width: 50%;
+    max-width: 50%;
+}
+.flex .full-width{
+    width: 100%;
+}
+.flex .third{
+    max-width: 33.33%;
+}
+.flex.horizontalCenter{
+    align-items: center;
+}
+.flex.wrap{
+    flex-wrap: wrap;
+}
+.flex.nowrap{
+    flex-wrap: nowrap;
+}
+.flex.column{
+    flex-direction: column;
+}
+.emphasized-text .icon-container{
+    margin-right: 0.5em;
+}
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (max-width: 768px) {
+    nav #nav-headline h1{
+        margin-top: 2.5em;
+        font-size: 1.8em;
+    }
+    #les-apercus .flex-container{
+        flex-direction: column;
+    }
+    #les-apercus .img-container img, #les-apercus .video-container video{
+        margin: 1em auto;
+        display: block;
+        border-radius: 2em;
+    }
+    #les-apercus article{
+        text-align: center;
+    }
+ }
+ 
+
+ @media only screen and (max-width: 992px){
+    .flex .half.noSpacing,.flex .half{
+        max-width: 100%;
+    }
+    .flex .third{
+        width: 100%;
+    }
+    .flex .half.noSpacing,.flex .half.force{
+        width: 100%;
+    }
+    nav .nav-element{
+        display:flex;
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+
+
+    .nav-element .nav-heading{
+        font-size: 2em;
+        margin-left: 1em;
+        text-align: left;
+    }
+
+    #nav-elements div{
+        display: inline-block;
+    }
+    #nav-elements{
+        opacity: 0;
+        height: 0;
+        width: 0;
+        top: 0;
+        right: 0;
+        transition: 0.5s;
+        padding: 2em;
+        z-index: 10000000000000000000000;
+    }
+     #nav-elements.display{
+        position: fixed;
+        opacity:1;
+        background-color: white;
+        height: 100vh;
+        width: 100vw;
+     }
+     #contacter-moi{
+         margin: 1em auto;
+     }
+ }
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+    nav{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    
+    #nav-elements{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        
+    }
+
+    .nav-element .icon-container img{
+        margin: 0.1em auto;
+        text-align: center;
+        display:block;
+        width: 2em;
+    }
+    
+    nav .nav-heading{
+        text-align: center;
+    }
+
+    nav #nav-headline{
+        border-right: 3px solid #495057;
+        max-width: 30%;
+    }
+
+    nav #nav-headline h1{
+        text-align: left;
+    }
+
+    nav #burger{
+        display: none;
+    }
+
+    #bienvenue {
+        max-width: 30%;
+    }
+
+    #les-apercus{
+        max-width: 60%;
+    }
+
+    #acceil{
+        display: flex;
+    }
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+
+ } 
+
+ @media screen and (min-width: 575.98px) and (max-width: 1199.98px){
+    .flex .third{
+        max-width: calc( 50% - 40px );
+    }
+
+
+}
