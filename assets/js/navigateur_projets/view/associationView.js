@@ -4,7 +4,7 @@ class AssociationView{
 
     constructor(element){
         this.element = element;
-        fetch("./assets/json/associations.json")
+        fetch("./assets/json/associations.json?" + (new Date()).getTime())
         .then(response => {
             return response.json();
             })
