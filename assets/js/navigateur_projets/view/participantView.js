@@ -23,7 +23,7 @@ class ParticipantView{
                 
             
                 if(parseInt(associationId) == parseInt(value.association)){
-                    $(this.createButton(value.nom,value.featured)).click(function(eventObject){
+                    $(this.createButton(value.nom,value.featured, value.reward)).click(function(eventObject){
                         if(i>0){
                             Navigateur.openSites(key, value.nom, associationName);
                         }else{
@@ -49,7 +49,7 @@ class ParticipantView{
         }));
     }
 
-    createButton( name, featured){
+    createButton( name, featured, reward){
         let buttonElement = $(`<button class="participant clickableElement ">
         <div class="icon-container">
           <img src="assets/icons/user.svg">
@@ -60,7 +60,10 @@ class ParticipantView{
       </button>`)[0];
       if(featured){
         buttonElement.classList.add("featured");
+      }else if(reward){
+        buttonElement.classList.add("reward");
       }
+
         return this.element.appendChild(buttonElement);
     }
 

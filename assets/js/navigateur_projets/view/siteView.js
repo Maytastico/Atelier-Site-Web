@@ -20,7 +20,7 @@ class SiteView{
             $("#sites-container .error").remove();
             Object.entries(this.sites.Sites).forEach(([key, value]) => {
                 if(parseInt(value.auteur) == parseInt(participantId)){
-                   this.createButton(value.lign,value.nom);
+                   this.createButton(value.lign,value.nom, value.reward);
                    i++;
                 }
             });
@@ -38,7 +38,7 @@ class SiteView{
         }));
     }
 
-    createButton(lign, name){
+    createButton(lign, name, reward){
         let buttonElement = $(`<a href="${lign}" class="site clickableElement ">
         <div class="icon-container">
           <img src="assets/icons/external-link.svg">
@@ -48,6 +48,9 @@ class SiteView{
         </div>
       </a>`)[0];
         console.log("Created button for site: "+name);
+        if(reward){
+            buttonElement.classList.add("reward");
+        }
         return this.element.appendChild(buttonElement);
     }
 

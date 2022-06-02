@@ -2,133 +2,131 @@
 <!doctype html>
 <html class="no-js" lang="fr" dir="ltr">
   <head>
-    <style>body{
-      background-color: aliceblue;
-  }
-  #loader-overlay{
-      overflow: hidden;
-      opacity: 0;
-      transition: 0.2s;
-      height: 0;
-      position: fixed;
-      top: 0;
-      left:0;
-      z-index: 90000000000000000000000000000000;
-  }
-  #loader-overlay.open{
-      height: 100vh;
-      width: 100vw;
-      background: linear-gradient(to right, #F7EDE2, #F5CAC3);
-      opacity: 1;
-      
-  }
-  #page-loader .icon-holder{
-      width: 40vw;
-      height: 40vw;
-      border-radius: 100%;
-      background-color: white;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 5px 1px #495057;
-      animation-name: wandering-shadow ;
-      animation-iteration-count: infinite;
-      animation-duration: 4s;
-      animation-timing-function: ease;
-  }
-  #page-loader .img-container{
-      width: 50%;
-      height: 50%;
-      padding: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  #page-loader .text-container{
-      font-size: 2em;
-      font-family: 'Open Sans'
-  }
-  #page-loader{
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      
-  }
-  
-  .color-pulse{
-      animation-name: color-pulse;
-      animation-iteration-count: infinite;
-      animation-duration: 2s;
-      animation-timing-function: ease;
-  }
-  @keyframes color-pulse {
-      0%   {
-          fill: white;
-      }
-      50%  {
-          fill: black;
-      }
-      100% {
-          fill: white;
-      }
-  }
-  .jump{
-      animation-name: jump;
-      animation-iteration-count: infinite;
-      animation-duration: 5s;
-      animation-timing-function: linear;
-  }
-  @keyframes jump {
-      from, 20%, 53%, 80%, to {
-      -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-      -webkit-transform: translate3d(0,0,0);
-      transform: translate3d(0,0,0);
-      }
-  
-      40%, 43% {
-      -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-      animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-      -webkit-transform: translate3d(0, -10px, 0);
-      transform: translate3d(0, -10px, 0);
-      }
-  
-      70% {
-      -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-      animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-      -webkit-transform: translate3d(0, -5px, 0);
-      transform: translate3d(0, -5px, 0);
-      }
-  
-      90% {
-      -webkit-transform: translate3d(0,-2px,0);
-      transform: translate3d(0,-2px,0);
-      }
-  }
-  @keyframes wandering-shadow {
-      0%   {
-          box-shadow: 0 5px 10px #495057;
-      }
-      25%  {
-          box-shadow: 5px 0px 10px #495057;
-      }
-      50%  {
-          box-shadow: 0 -5px 10px #495057;
-      }
-      75%  {
-          box-shadow: -5px 0px 10px #495057;
-      }
-      100% {
-          box-shadow: 0 5px 10px #495057;
-      }
-  }</style>
+    <style>
+    #loader-overlay{
+        overflow: hidden;
+        opacity: 0;
+        transition: 0.2s;
+        height: 0;
+        position: fixed;
+        top: 0;
+        left:0;
+        z-index: 900000000;
+    }
+    #loader-overlay.open{
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(to right, #F7EDE2, #F5CAC3);
+        opacity: 1;
+        
+    }
+    #page-loader .icon-holder{
+        width: 40vw;
+        height: 40vw;
+        border-radius: 100%;
+        background-color: white;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 5px 1px #495057;
+        animation-name: wandering-shadow ;
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
+        animation-timing-function: ease;
+    }
+    #page-loader .img-container{
+        width: 50%;
+        height: 50%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #page-loader .text-container{
+        font-size: 2em;
+        font-family: 'Open Sans'
+    }
+    #page-loader{
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        
+    }
+    .color-pulse{
+        animation-name: color-pulse;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+    }
+    @keyframes color-pulse {
+        0%   {
+            fill: white;
+        }
+        50%  {
+            fill: black;
+        }
+        100% {
+            fill: white;
+        }
+    }
+    .jump{
+        animation-name: jump;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+    }
+    @keyframes jump {
+        from, 20%, 53%, 80%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        }
+    
+        40%, 43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+        }
+    
+        70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0);
+        }
+    
+        90% {
+        -webkit-transform: translate3d(0,-2px,0);
+        transform: translate3d(0,-2px,0);
+        }
+    }
+    @keyframes wandering-shadow {
+        0%   {
+            box-shadow: 0 5px 10px #495057;
+        }
+        25%  {
+            box-shadow: 5px 0px 10px #495057;
+        }
+        50%  {
+            box-shadow: 0 -5px 10px #495057;
+        }
+        75%  {
+            box-shadow: -5px 0px 10px #495057;
+        }
+        100% {
+            box-shadow: 0 5px 10px #495057;
+        }
+    }
+    </style>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -572,7 +570,7 @@
             </div>
           </div>
         </a>
-        <a href="https://discord.gg/YNbysWdY" target="_blank">
+        <a href="https://discord.gg/udM6dAudmk" target="_blank">
           <div class="emphasized-text flex box-container clickableElement">
             <div class="icon-container">
               <img src="assets/icons/discord-brands.svg">
