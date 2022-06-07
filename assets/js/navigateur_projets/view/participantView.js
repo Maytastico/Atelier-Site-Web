@@ -1,6 +1,8 @@
 class ParticipantView{
 
     static networkError = false;
+
+    static rewardDelay = 0;
     
     constructor(associationId, associationName, element){
         this.element = element;

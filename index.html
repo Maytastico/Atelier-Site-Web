@@ -48,6 +48,9 @@
         font-size: 2em;
         font-family: 'Open Sans'
     }
+    #page-loader .img-container{
+      overflow: visible;
+    }
     #page-loader{
         top: 0;
         left: 0;
@@ -81,6 +84,7 @@
         animation-iteration-count: infinite;
         animation-duration: 5s;
         animation-timing-function: linear;
+        overflow: visible;
     }
     @keyframes jump {
         from, 20%, 53%, 80%, to {
@@ -219,7 +223,7 @@
     <section id="acceil">
       <nav>
         <div class="headline" id="nav-headline">
-          <h1>Acceil ateliers technologie</h1>
+          <h1>Accueil ateliers technologie</h1>
         </div>
         <ul id="nav-elements" class="flex-container align-middle align-spaced">
           <div class="menu flex-container align-middle align-spaced">
@@ -304,17 +308,17 @@
           <li>
             <div class="flex-container">
               <div class="img-container">
-                  <img src="assets/img/site_saint_caprais.jpg"></img>
+                  <img src="assets/img/quinsac.jpg"></img>
               </div>
               <article class="flex half column">
-                <h1>L'activité Site Web commence à Saint Caprais</h1>
-                <div class="date-container">4 Mai 2022</div>
-                <div class="location-container">APS Saint-Caprais</div>
+                <h1>L'activité Site Web à Quinsac</h1>
+                <div class="date-container">2 Juin 2022</div>
+                <div class="location-container">APS Quinsac</div>
                 <div class="description-container">
-                  On va faire l atelier site web chaque lundi et jeudi dans le centre de loisirs à Saint-Caprais. Les enfants sont très enthousiastes, regarde les beaux sitwebs!
+                  Mon projet est presque fini, mais les sites des enfants à Quinsac sont très beau. Il faut regarde les sites!
                 </div>
                 <div class="lignes">
-                  <a onclick="Navigateur.openParticipants(2, 'Saint-Caprais APS')" href="#navigateur-projets" class="clickableElement btn">Voir les projets</a>
+                  <a onclick="Navigateur.openParticipants(3, 'Quinsac APS')" href="#navigateur-projets" class="clickableElement btn">Voir les sites</a>
                 </div> 
               </article>
             </div>
@@ -476,7 +480,7 @@
     <section class="flex wrap around">
       <section id="navigateur-projets" class="half">
         
-        <h1>Projets des enfants</h1>
+        <h1>Projets d'enfants</h1>
 
         <section id="criticalError" class="dialog half"><div><img src="assets/icons/alert-circle.svg"></div><h5>Error de reseau</h5></section>
         <section id="loading" class="dialog half"><div><div class="loaderElement"></div><h5>Chargement des données</h5></div></section>
